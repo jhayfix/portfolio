@@ -1,0 +1,79 @@
+.contact-me-section {
+    background-color: #f3f3f3;
+    color: black;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    padding-top: 20px;
+}
+
+.contact-me-section .container {
+    width: 600px;
+}
+
+.contact-me-section .contact-me-header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+    opacity: 0.7;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.contact-me-section .contact-me-form {
+    padding: 40px;
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.contact-me-section .form-control {
+    margin-bottom: 20px;
+}
+.contact-me-section .form-control .input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contact-me-section .form-control .contact-message {
+    max-height: 100px;
+    min-height: 100px;
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 16px;
+}
+
+.contact-me-section .form-control .contact-me-button {
+    width: 100%;
+    border: none;
+    background-color: var(--brand-color);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+
+.contact-me-button:hover {
+    opacity: 0.9;
+    color: white;
+    font-size: 20px;
+    transition: all 0.1s ease-in;
+}
+
+
+@media only screen and (max-width: 650px) { 
+    .contact-me-section .form-control {
+        margin-bottom: 30px;
+    }
+}
+

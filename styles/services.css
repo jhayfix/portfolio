@@ -1,0 +1,131 @@
+.services {
+    padding: 50px 0;
+    background-attachment: fixed;
+    background-color: white;
+    color: #f3f3f3;
+}
+.services .container {
+    width: 1000px;
+    margin: auto;
+}
+
+/* Header and Container */
+.services .services-header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--brand-color);
+    font-size: 30px;
+    padding-bottom: 10px;
+    width: 150px;
+    border-bottom: 3px solid var(--brand-color);
+    margin-bottom: 50px;
+}
+
+.services .services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;   
+}
+
+
+.services .service-control {
+    border-radius: 20px;
+    width: 290px;
+    height: 400px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.2);
+    background: black;
+    overflow: hidden;
+}
+
+
+/* In Container */
+.service-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.services .service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.services .service-text-content {
+    text-align: center;
+}
+
+.service-text-content .service-header {
+    margin: 15px auto;
+    color: var(--brand-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+.service-text-content .service-text {
+    width: 200px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+.service-text-content .text-sp {
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .services {
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
+    .services .services-container {
+        display: flex;
+        flex-direction: column;  
+        padding: 40px;
+        margin-top: -30px;
+        padding-top: 5px;
+    }
+    .services .services-header {
+        margin-left: 50px;
+    }
+    .services .container {
+        width: 100vw;
+        text-align: center;
+        margin: auto;
+    }
+    .services .service-control {
+        max-height: 280px;
+        width: 280px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .services .service-img-container {
+        height: 100%;
+        background-color: red;
+        opacity: 0.5;
+        
+    }
+    .services .service-text-content {
+        position: absolute;
+        top: 35%;
+        left: 30px;
+        font-size: 18px;
+        
+    }
+    /* .services .service-control-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        
+    } */
+    .services .service-header {
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(94, 223, 94);
+        border-bottom: 3px solid rgb(94, 223, 94);
+        /* color: rgb(0, 255, 221); */
+    }
+}
