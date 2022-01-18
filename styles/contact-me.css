@@ -1,13 +1,15 @@
 .contact-me-section {
     background-color: #f3f3f3;
     color: black;
-    height: 100vh;
+    min-height: 100vh;
+    max-width: 100vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
     padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .contact-me-section .container {
@@ -33,6 +35,9 @@
 .contact-me-section .form-control {
     margin-bottom: 20px;
 }
+
+/* Form Inputs And Labels */
+
 .contact-me-section .form-control .input {
     width: 100%;
     height: 40px;
@@ -41,6 +46,19 @@
     opacity: 0.9;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.contact-me-section .form-control input {
+    border: none;
+    border-bottom: 2px solid gray;
+    
+}
+.contact-me-section .form-control textarea:focus {
+    outline: 2px solid var(--brand-color);
+    border: none;
+}
+.contact-me-section .form-control input:focus {
+    outline: none;
+    
+}
 .contact-me-section .form-control .contact-message {
     max-height: 100px;
     min-height: 100px;
@@ -48,6 +66,8 @@
     min-width: 100%;
     font-size: 16px;
 }
+
+/* End Form Inputs And Labels */
 
 .contact-me-section .form-control .contact-me-button {
     width: 100%;

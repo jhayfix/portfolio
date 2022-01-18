@@ -6,6 +6,7 @@
     background-attachment: fixed;
     border-top: 3px solid var(--brand-color);
     border-bottom: 3px solid var(--brand-color);
+    width: 100vw;
 }
 .about .container {
     width: 700px;
@@ -139,6 +140,29 @@
 
 
     
+}
+
+@media only screen and (max-width: 768px) {
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: 20% 20% ;
+    }
+    .about .container {
+        width: 90%;
+    }
+    .grid-about-me {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    .about-portrait-container {
+        justify-self: center;
+        margin-left: -20px;  
+    }
+    .about .about-header , .about .intro{
+        text-align: center;
+    }
 }
 
 /* End Responsiveness */

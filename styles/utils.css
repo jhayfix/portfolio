@@ -3,12 +3,13 @@
 .move-to-top {
     position: fixed;
     top: 80%;
-    right: 40px;
+    right: 2%;
     background-color: var(--brand-color-2);
     padding: 5px;
     border-radius: 30px;
     z-index: 100;
     opacity: 0.8;
+    
 }
 .move-to-top:hover {
     opacity: 1;
@@ -18,10 +19,11 @@
 
 /* Draggable Div */
 #mydiv {
+    display: none;
     position: fixed;
     top: 30%;
-    right: 10%;
-    z-index: 1000;
+    right: 40%;
+    z-index: 2;
     /* background-color: #2196F3; */
     background-color: var(--brand-color);
     text-align: center;
@@ -82,6 +84,19 @@
 
 .footer .footer-links-ul a:hover {
     color: white;
+}
+
+.footer .footer-social-links {
+    font-size: 13px;
+}
+.footer .footer-social-links a {
+    margin-right: 10px;
+}
+.footer .footer-social-links i:hover {
+    color: var(--brand-color-2);
+}
+.footer .footer-social-links {
+    margin-bottom: 20px;
 }
 /* End Footer */
 
