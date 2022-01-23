@@ -1,6 +1,69 @@
-/* Move To Top */
+:root {
+    --primary-color: rgb(34, 33, 33);
+    --primary-color-light: rgb(34, 30, 30);
+    --primary-color-dark: rgb(10, 4, 4);
+    --menu-z-index: 100;
+    --navbar-z-index: 50;
+    --home-z-index: -10;
+    --brand-color: rgb(9, 111, 136);
+    --brand-color-2: rgb(0, 183, 255);
+    
+}
 
-.move-to-top {
+/* Tags */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+html { scroll-behavior: smooth; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+i {
+    cursor: pointer;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+/* End Tags */
+
+
+/* Utils Classes */
+.container {
+    width: 1000px;
+    margin: auto;
+}
+.wrench {
+    animation: brandColorChange 5s infinite;
+}
+.brand-highlight {
+    color: var(--brand-color-2);
+}
+.text-highlight {
+    color: var(--brand-color);
+}
+/* End Utils Classes */
+
+
+/* Jump To Top */
+.jump-to-top {
     position: fixed;
     top: 80%;
     right: 2%;
@@ -11,11 +74,11 @@
     opacity: 0.8;
     
 }
-.move-to-top:hover {
+.jump-to-top:hover {
     opacity: 1;
 }
+/* End Jump To Top */
 
-/* End Move To Top */
 
 /* Draggable Div */
 #mydiv {
@@ -44,9 +107,8 @@
     height: 100%;
     width: 100%;
   }
-
-
 /* End Draggable Div */
+
 
 /* Footer */
 .footer {
@@ -62,9 +124,12 @@
 .footer .container {
     text-align: center;
 }
+
+
 .footer .copyright {
     font-size: 16px;
 }
+
 
 .footer .footer-links-ul {
     display: flex;
@@ -73,7 +138,6 @@
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
-
 .footer .footer-links-ul p {
     margin-left: 20px;
 }
@@ -81,10 +145,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(0, 183, 255);
 }
-
 .footer .footer-links-ul a:hover {
     color: white;
 }
+
 
 .footer .footer-social-links {
     font-size: 13px;
@@ -101,7 +165,9 @@
 /* End Footer */
 
 
+/* Mobile Responsiveness */
 @media only screen and (max-width: 650px) {
+    /* footer */
     .footer {
         width: 100vw;
         overflow-x: hidden;
@@ -127,14 +193,18 @@
         margin: auto;
         line-height: 1.8;
     }
+    /* End Footer */
+
 
     /* Draggable Menu */
     #mydiv {
         display: none;
     }
+    /* End Draggale Menu */
+
 
     /* Jump To Top */
-    .move-to-top { 
+    .jump-to-top { 
         position: fixed;
         top: 89%;
         right: 0;
@@ -144,4 +214,6 @@
         z-index: 100;
         opacity: 0.8;
     }
+    /* End Jump To Top */
 }
+/* End Mobile Responsiveness */

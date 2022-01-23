@@ -19,18 +19,6 @@ const seoLoadText = document.querySelector('.stat-section .seo-loading-text')
 const contactForm = document.querySelector('#contact-me-form')
 const contactFormLabel = contactForm.querySelectorAll('.form-control .label')
 
-contactForm.addEventListener('click', (e) => {
-    if (e.target.classList.contains('input')) {
-        contactFormLabel.forEach((input) => {
-            input.classList.remove('label-in');
-        })
-    }
-    else if (e.target.classList.contains('label')) {
-        contactFormLabel.forEach((label) => {
-            label.classList.remove('label-in')
-        })
-    }
-})
 
 // Random Choice Picker
 const tagsContainer = document.querySelector('#tags-container');
@@ -38,7 +26,7 @@ const rcpTextarea = document.querySelector('#rcp-textarea');
 const rcpHeader = document.querySelector('#rcp-header');
 
 // Movable Menu
-const toTop = document.querySelector('.move-to-top');
+const toTop = document.querySelector('.jump-to-top');
 const myDiv = document.querySelector('#mydiv');
 
 // Scroll To Top
@@ -248,11 +236,26 @@ function highlightTag(tag) {
 function unHighlightTag(tag) {
     tag.classList.remove('highlight')
 }
-
 // End Random Choice Picker
 
-// Stat Loading Text
 
+// Contact Form Inputs
+contactForm.addEventListener('click', (e) => {
+    if (e.target.classList.contains('input')) {
+        contactFormLabel.forEach((input) => {
+            input.classList.remove('label-in');
+        })
+    }
+    else if (e.target.classList.contains('label')) {
+        contactFormLabel.forEach((label) => {
+            label.classList.remove('label-in')
+        })
+    }
+})
+// End Contact Form Inputs
+
+
+// Stat Loading Text
 // Web Dev
 let webDevLoad = 0
 

@@ -1,3 +1,4 @@
+/* Contact Me Section */
 .contact-me-section {
     background-color: #f3f3f3;
     color: black;
@@ -12,11 +13,9 @@
     padding-bottom: 30px;
     overflow-x: hidden;
 }
-
 .contact-me-section .container {
     max-width: 900px;
 }
-
 .contact-me-section .contact-me-header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 45px;
@@ -26,12 +25,12 @@
     padding-bottom: 20px;
 }
 
+
 .contact-me-section .contact-me-info-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-gap: 40px;
 }
-
 .contact-me-section .contact-me-form {
     padding: 40px;
     box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.4);
@@ -39,14 +38,13 @@
     background: url('../images/about/about-bg.jpg') no-repeat center center/cover;
     background-attachment: fixed;
 }
-
 .contact-me-section .form-control {
     margin-bottom: 10px;
     position: relative;
 }
 
-/* Form Inputs And Labels */
 
+/* Form Inputs And Labels */
 .contact-me-section .form-control .input {
     width: 100%;
     height: 40px;
@@ -63,12 +61,8 @@
 .contact-me-section .form-control input:focus {
     outline: none;
     border: 2px solid var(--brand-color);
+    box-shadow: none;
 }
-.contact-me-section .form-control .contact-message:focus {
-    border: 2px solid var(--brand-color);
-    outline: none;
-}
-
 .contact-me-section .form-control .contact-message {
     max-height: 100px;
     min-height: 100px;
@@ -77,6 +71,12 @@
     font-size: 16px;
     border: 2px solid gray;
 }
+.contact-me-section .form-control .contact-message:focus {
+    border: 2px solid var(--brand-color);
+    outline: none;
+    box-shadow: none;
+}
+
 
 .contact-me-section .form-control .label {
     font-family:  sans-serif, Verdana, Geneva, Tahoma;
@@ -95,8 +95,8 @@
 .contact-me-section .form-control .message-label.label-in {
     top: 18px;
 }
-
 /* End Form Inputs And Labels */
+
 
 .contact-me-section .form-control .contact-me-button {
     width: 100%;
@@ -169,6 +169,8 @@
     text-align: center;
     margin-bottom: 20px;
 }
+/* End Contact Me Section */
+
 
 /* Mobile Responsive */
 @media only screen and (max-width: 905px) {
@@ -186,8 +188,10 @@
     }
 
 }
+/* End Tablet Responsive */
 
 
+/* Mobile Responsive */
 @media only screen and (max-width: 650px) {
     .contact-me-section .form-control {
         margin-bottom: 30px;
@@ -211,8 +215,11 @@
         grid-template-columns: 1fr;
         grid-gap: 20px;
     }
+    .contact-me-section .form-control .contact-me-button{
+        box-shadow: none;
+    }
 }
-
+/* End Mobile Responsive */
 /* https://chatwith.io/s/jhayfhix */
 
 
