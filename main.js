@@ -4,21 +4,42 @@ const portraitContainer = document.querySelector('.portrait-container');
 const portraitWrapper = document.querySelector('.portrait-wrapper');
 
 const navbarItem = document.querySelectorAll('.navbar-item');
-const navbar = document.querySelector('.navbar')
-const headerFixed = document.querySelector('.header-fixed')
+const navbar = document.querySelector('.navbar');
+const headerFixed = document.querySelector('.header-fixed');
 
-const brandName = document.querySelector('.branding-name')
-const brandHeader = document.querySelector('.branding-header')
+const brandName = document.querySelector('.branding-name');
+const brandHeader = document.querySelector('.branding-header');
+
+// Loading Text
+const webDevloadText = document.querySelector('.stat-section .web-dev-loading-text')
+const designLoadText = document.querySelector('.stat-section .design-loading-text')
+const seoLoadText = document.querySelector('.stat-section .seo-loading-text')
+
+// Contact Form
+const contactForm = document.querySelector('#contact-me-form')
+const contactFormLabel = contactForm.querySelectorAll('.form-control .label')
+
+contactForm.addEventListener('click', (e) => {
+    if (e.target.classList.contains('input')) {
+        contactFormLabel.forEach((input) => {
+            input.classList.remove('label-in');
+        })
+    }
+    else if (e.target.classList.contains('label')) {
+        contactFormLabel.forEach((label) => {
+            label.classList.remove('label-in')
+        })
+    }
+})
 
 // Random Choice Picker
-const tagsContainer = document.querySelector('#tags-container')
-const rcpTextarea = document.querySelector('#rcp-textarea')
-const rcpHeader = document.querySelector('#rcp-header')
-
+const tagsContainer = document.querySelector('#tags-container');
+const rcpTextarea = document.querySelector('#rcp-textarea');
+const rcpHeader = document.querySelector('#rcp-header');
 
 // Movable Menu
-const toTop = document.querySelector('.move-to-top')
-const myDiv = document.querySelector('#mydiv')
+const toTop = document.querySelector('.move-to-top');
+const myDiv = document.querySelector('#mydiv');
 
 // Scroll To Top
 
@@ -230,3 +251,50 @@ function unHighlightTag(tag) {
 
 // End Random Choice Picker
 
+// Stat Loading Text
+
+// Web Dev
+let webDevLoad = 0
+
+let loadTextInterval = setInterval(loadTextFunction, 30)
+
+function loadTextFunction() {
+    webDevLoad++
+
+    if(webDevLoad > 79) {
+        clearInterval(loadTextInterval)
+    }
+
+    webDevloadText.innerText = `${webDevLoad}%`
+}
+// UI/UX Design
+let designLoad = 0
+
+let loadDesignTextInt = setInterval(loadDesignTextFunction, 30)
+
+function loadDesignTextFunction() {
+    designLoad++
+
+    if(designLoad > 75) {
+        clearInterval(loadDesignTextInt)
+    }
+
+    designLoadText.innerText = `${designLoad}%`
+}
+// Seo Load
+let seoLoad = 0
+
+let loadSeoTextInt = setInterval(loadSeoTextFunction, 80)
+
+function loadSeoTextFunction() {
+    seoLoad++
+
+    if(seoLoad > 87) {
+        clearInterval(loadSeoTextInt)
+    }
+
+    seoLoadText.innerText = `${seoLoad}%`
+}
+
+
+// End Stat Loading Text

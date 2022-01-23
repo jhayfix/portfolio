@@ -1,11 +1,12 @@
 .services {
     padding: 50px 0;
-    background-attachment: fixed;
     background-color: white;
     color: #f3f3f3;
     width: 100vw;
     overflow: hidden;
+    position: relative;
 }
+
 .services .container {
     width: 1000px;
     margin: auto;

@@ -75,6 +75,7 @@
 }
 .rcp-textarea:focus {
     outline: none;
+    border: 2px solid var(--brand-color);
 }
 .rcp-wrapper .tags-container {
     margin-left: 100px;
@@ -82,6 +83,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .tags-container .tag {
+    font-family: sans-serif;
     padding: 5px 10px;
     border-radius: 20px;
     margin-right: 10px;

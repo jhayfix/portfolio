@@ -10,10 +10,11 @@
     background-attachment: fixed;
     padding-top: 20px;
     padding-bottom: 30px;
+    overflow-x: hidden;
 }
 
 .contact-me-section .container {
-    width: 600px;
+    max-width: 900px;
 }
 
 .contact-me-section .contact-me-header {
@@ -25,15 +26,23 @@
     padding-bottom: 20px;
 }
 
+.contact-me-section .contact-me-info-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 40px;
+}
+
 .contact-me-section .contact-me-form {
     padding: 40px;
     box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.4);
     border-radius: 20px;
-    background-color: white;
+    background: url('../images/about/about-bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
 }
 
 .contact-me-section .form-control {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 /* Form Inputs And Labels */
@@ -42,29 +51,49 @@
     width: 100%;
     height: 40px;
     padding: 10px;
+    margin-top: 6px;
     font-size: 18px;
     opacity: 0.9;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid gray;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .contact-me-section .form-control input {
-    border: none;
-    border-bottom: 2px solid gray;
-    
-}
-.contact-me-section .form-control textarea:focus {
-    outline: 2px solid var(--brand-color);
-    border: none;
+    border-radius: 10px;
 }
 .contact-me-section .form-control input:focus {
     outline: none;
-    
+    border: 2px solid var(--brand-color);
 }
+.contact-me-section .form-control .contact-message:focus {
+    border: 2px solid var(--brand-color);
+    outline: none;
+}
+
 .contact-me-section .form-control .contact-message {
     max-height: 100px;
     min-height: 100px;
     max-width: 100%;
     min-width: 100%;
     font-size: 16px;
+    border: 2px solid gray;
+}
+
+.contact-me-section .form-control .label {
+    font-family:  sans-serif, Verdana, Geneva, Tahoma;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.7;
+    margin-left: 13px;
+    cursor: text;
+}
+.contact-me-section .form-control .label.label-in {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    z-index: 10;
+}
+.contact-me-section .form-control .message-label.label-in {
+    top: 18px;
 }
 
 /* End Form Inputs And Labels */
@@ -91,9 +120,99 @@
 }
 
 
-@media only screen and (max-width: 650px) { 
+/* Contact Me Info */
+
+.contact-me-section .contact-me-info {
+    height: 300px;
+    min-width: 300px;
+    background-color: var(--brand-color);
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact-me-section .contact-me-info .container {
+    width: 100%;
+}
+.contact-me-section .contact-me-info .info-control {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: 20px;
+}
+
+.contact-me-section .contact-me-info .info-control .contact-info-link {
+    margin-right: 20px;
+}
+.contact-me-section .contact-me-info .info-control .info-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 1px dotted #f3f3f3;
+}
+
+/* Icons Only */
+.contact-me-section .contact-me-info .icons-container {
+    margin-top: 40px;
+    text-align: center;
+}
+.contact-me-section .contact-me-info .icons-container .link {
+    margin-right: 10px;
+}
+.contact-me-section .contact-me-info i:hover {
+    color: var(--brand-color-2);
+}
+.contact-me-section .brand-unique {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 905px) {
+    .contact-me-section .contact-me-info-container {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+    .contact-me-section .contact-me-form {
+        width: 70%;
+        margin: auto;
+    }
+    .contact-me-section .contact-me-info {
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+
+@media only screen and (max-width: 650px) {
     .contact-me-section .form-control {
         margin-bottom: 30px;
     }
+    .contact-me-button:hover {
+        opacity: 1;
+    }
+    
+    .contact-me-section .contact-me-form {
+        width: 100%;
+        box-shadow: none;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        border-bottom: 2px solid var(--brand-color);
+    }
+    .contact-me-section .contact-me-info {
+        width: 90%;
+    }
+    .contact-me-section .contact-me-info-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
 }
+
+/* https://chatwith.io/s/jhayfhix */
+
 
