@@ -144,7 +144,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 // Auto Write Header
-let headerText = 'Web Developer, Programmer & Designer...';
+// let headerText = 'Web Developer, Programmer & Designer...';
+let headerText = 'A Front-End Developer...';
 let autoWriteIndex = 0;
 
 setInterval(autoWriteHeader,200)

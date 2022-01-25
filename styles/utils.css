@@ -213,6 +213,8 @@ ul {
         border-radius: 8px;
         z-index: 100;
         opacity: 0.8;
+        width: 55px;
+        text-align: center;
     }
     /* End Jump To Top */
 }
